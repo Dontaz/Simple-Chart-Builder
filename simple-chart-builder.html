@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Конструктор графиков</title>
+    <title>Simple Chart Builder</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
     <style>
         :root {
@@ -382,11 +382,11 @@
 
             <div id="listViewContainer">
                 <div class="control-group">
-                    <label id="ui-label-names">Названия (Ось X / Сектора)</label>
-                    <input type="text" id="labels" value="Работа, Сон, Хобби" oninput="syncInputsToTable(); updateChart()">
+                    <label id="ui-label-names">Метки (Ось X / Сектора) через запятую</label>
+                    <input type="text" id="labels" value="Abc, Bca, Cba" oninput="syncInputsToTable(); updateChart()">
                 </div>
                 <div class="control-group" style="margin-top: 24px">
-                    <label id="ui-label-data">Данные (Числа)</label>
+                    <label id="ui-label-data">Данные (Числа) через запятую</label>
                     <input type="text" id="data" value="50, 30, 20" oninput="syncInputsToTable(); updateChart()">
                 </div>
             </div>
@@ -510,13 +510,12 @@
         let draggedTableItem = null;
         let currentLang = 'ru';
 
-        // --- TRANSLATIONS ---
         const translations = {
             ru: {
                 title: "📊 Конструктор графиков",
                 type: "Тип графика",
-                lblNames: "Названия (Ось X / Сектора)",
-                lblData: "Данные (Числа)",
+                lblNames: "Метки (Ось X / Сектора) через запятую",
+                lblData: "Данные (Числа) через запятую",
                 thName: "Название",
                 thValue: "Значение",
                 btnAddRow: "+ Добавить строку",
@@ -565,8 +564,8 @@
             en: {
                 title: "📊 Chart Builder",
                 type: "Chart Type",
-                lblNames: "Labels (X Axis / Sectors)",
-                lblData: "Data (Numbers)",
+                lblNames: "Labels (X-axis / Sectors) separated by commas",
+                lblData: "Data (Numbers) separated by commas",
                 thName: "Label",
                 thValue: "Value",
                 btnAddRow: "+ Add Row",
