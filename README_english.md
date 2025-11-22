@@ -1,6 +1,6 @@
 # Simple-Chart-Builder
 
-RU version – **[`README.md`](/README.md)**
+RUSSIAN version – **[`README.md`](/README.md)**
 
 ## Description
 
